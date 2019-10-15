@@ -45,6 +45,7 @@ buildscript {
 
 1.4.2 Dentro da android { ... }seção no seu app/build.gradle, verifique se você é compileSdkVersione
  buildToolsVersiontem pelo menos o nível 26 da API ou superior
+ 
 android {
     compileSdkVersion 27
     buildToolsVersion '27.0.3'
