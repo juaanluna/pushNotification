@@ -3,22 +3,23 @@ Esta documentação tem como objetivo a explicação de como criar e manipular p
 
 Nesta documentação você encontrará informações sobre:
 
-1.OneSignal
+**1.OneSignal**
 
-2.Zapier(adicional)
+**2.Zapier(adicional)**
 
 
-1.One signal
+## OneSignal
 
-1.1 Instalação
+**1.1 Instalação**
 
      npm install --save react-native-onesignal
 
-1.2 Link OneSignal
+**1.2 Link OneSignal**
         
     react-native link react-native-onesignal
 
-1.3 Instruções específicas para Android
+**1.3 Instruções específicas para Android**
+
 No seu AndroidManifest.xml, adicione android:launchMode="singleTop"
 como um atributo à sua atividade principal.
 
@@ -31,9 +32,9 @@ como um atributo à sua atividade principal.
         .....
 
 
-1.4 Adicionando o plug-in Gradle
+**1.4 Adicionando o plug-in Gradle**
 
-1.4.1 Na parte superior do seu projeto Android app/build.gradle,
+**1.4.1** Na parte superior do seu projeto Android app/build.gradle,
  adicione o seguinte código na parte superior do arquivo:
 
     buildscript {
@@ -47,7 +48,7 @@ como um atributo à sua atividade principal.
 
 
 
-1.4.2 Dentro da android { ... }seção no seu app/build.gradle, verifique se você é compileSdkVersione
+**1.4.2** Dentro da android { ... }seção no seu app/build.gradle, verifique se você é compileSdkVersione
  buildToolsVersiontem pelo menos o nível 26 da API ou superior
  
       android {
