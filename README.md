@@ -3,12 +3,13 @@ Esta documentação tem como objetivo a explicação de como criar e manipular p
 
 Nesta documentação você encontrará informações sobre:
 
-**1.OneSignal**
+**1. integrar OneSignal**
 
-**2.Zapier(adicional)**
+**2. Adicionar icone na notificação(Adicional)**
 
 
-## OneSignal
+
+##  integrar OneSignal
 
 
 **1.1 Instalação**
@@ -58,8 +59,8 @@ como um atributo à sua atividade principal.
 
 
 
-**1.4.2** Dentro da android no seu app/build.gradle, verifique se seu compileSdkVersione
- e buildToolsVersion possui a versão 26 da API ou superior
+**1.4.2** Dentro do seu Android>app>build.gradle, verifique se seu compileSdkVersione
+ e buildToolsVersion possuem a versão 26 da API ou superior
  
       android {
           compileSdkVersion 27
@@ -69,7 +70,7 @@ como um atributo à sua atividade principal.
       
   **1.5 Inicializando**
   
-  
+  Na raiz do projeto crie seu App.js:
   
      import React, { Component } from 'react';
      import OneSignal from 'react-native-onesignal'; // Import package from node modules
@@ -78,7 +79,7 @@ como um atributo à sua atividade principal.
 
      constructor(properties) {
          super(properties);
-         OneSignal.init("YOUR_ONESIGNAL_APPID");
+         OneSignal.init("YOUR_ONESIGNAL_APPID"); //ESSE COMANDO IRÁ INICIAR
 
          OneSignal.addEventListener('received', this.onReceived);
          OneSignal.addEventListener('opened', this.onOpened);
@@ -106,3 +107,70 @@ como um atributo à sua atividade principal.
          console.log('Device info: ', device);
        }
      }
+
+Após estes passos, apenas faltará configurar no OneSignal:
+<br/>
+<br/>
+**1.6 Configurar OneSignal**
+
+
+
+**1.6.1 Firebase**
+
+1. Criar projeto no Firebase
+
+2. Pegar CHAVE DO SERVIÇO e CÓDIGO DO REMETENTE em:  Configurações do projeto>CloudMessaging
+
+
+
+**1.6.2 OneSignal**
+
+1. NewApp/WebSite - Criar novo App
+
+
+2. **Select plataform:** Google Android(No meu caso)
+        
+     **Configure Platform:** Colar CHAVE DO SERVIÇO e CODIGO DO REMETENTE
+
+     **Select SDK:** React Native(No meu caso)
+   
+     **Install SDK:** Pegue o AppID e coloque no código
+    <br/>
+    <br/>
+     Após estes passos, seu app estará pronto para receber notificações
+
+
+
+
+##  Adicionar icone na notificação(Adicional)
+
+**1. Gere o incone**
+
+É recomendado que utilize o  Android Asset Studio
+<br/>
+<br/>
+**2. adicione o icone**
+<br/>
+<br/>
+Adicionar o icone gerado dentro das pastas:
+<br/>
+<br/>
+*drawable-hdpi<br/>
+*drawable-mdpi<br/>
+*drawable-xhdpi<br/>
+*drawable-xxhdpi<br/>
+*drawable-xxxhdpi<br/>
+<br/>
+<br/>
+Caso não tenha essas pastas, as crie.
+<br/>
+<br/>
+**Caminho:**
+     Android>App>Src>Main>Res
+     <br/>
+     <br/>
+     <br/>
+     **No OneSignal**
+     <br/>
+     Quando for criar uma notificação, em SMALL ICON, coloque o NOME do icone
+
