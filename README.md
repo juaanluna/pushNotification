@@ -9,7 +9,8 @@ Nesta documentação você encontrará informações sobre:
 1.One signal
 
 1.1 Instalação
-npm install --save react-native-onesignal
+
+  npm install --save react-native-onesignal
 
 1.2 Link OneSignal
 react-native link react-native-onesignal
