@@ -170,7 +170,7 @@ Caso não tenha essas pastas, as crie.
      <br/>
      <br/>
      <br/>
-     **No OneSignal**
+     **3. No OneSignal**
      <br/>
      Quando for criar uma notificação, em SMALL ICON, coloque o NOME do icone
 
