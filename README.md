@@ -9,7 +9,7 @@ Nesta documentação você encontrará informações sobre:
 
 
 
-##  integrar OneSignal
+##  1. integrar OneSignal
 
 
 **1.1 Instalação**
@@ -142,7 +142,7 @@ Após estes passos, apenas faltará configurar no OneSignal:
 
 
 
-##  Adicionar icone na notificação(Adicional)
+##  2 .  Adicionar icone na notificação(Adicional)
 
 **1. Gere o incone**
 
